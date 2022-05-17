@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/xgo_icon180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/xgo_icon32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/xgo_icon16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xgorobot.github.io","root":"/","images":"/images","scheme":"Mist","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":9,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="title1 {color:white;background-color:black;}   - What is XGO mini -I Product Description&amp;emsp;&amp;emsp;XGO-mini is a desktop AI robot dog with 12 DOFs inlaid with Kendryte K210 chip for AI edge comp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XGO mini Quadruped robot dog data collection">
+<meta property="og:url" content="https://xgorobot.github.io/2021/08/15/XGOmini/index.html">
+<meta property="og:site_name" content="Luwu Dynamics">
+<meta property="og:description" content="title1 {color:white;background-color:black;}   - What is XGO mini -I Product Description&amp;emsp;&amp;emsp;XGO-mini is a desktop AI robot dog with 12 DOFs inlaid with Kendryte K210 chip for AI edge comp">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/produce/xgo-mini%E8%AF%B4%E6%98%8E%E4%B9%A61-1.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/produce/xgo-mini%E8%AF%B4%E6%98%8E%E4%B9%A61-2.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/produce/xgo-mini%E8%AF%B4%E6%98%8E%E4%B9%A62-1.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/produce/minidemo_main.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/trafficsign/goforward.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/trafficsign/stop.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/trafficsign/forbid.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/trafficsign/park.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/qrcode/hello.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/qrcode/sitdown.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/qrcode/goforward.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/qrcode/gobackward.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/qrcode/turnleft.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/qrcode/turnright.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/qrcode/show.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interfaces.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_hello.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_main.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_btconnect.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_btshake.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_btsearch.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_btconnected.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_calibration.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_setting.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_about.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_controlnormal.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_controlsenior.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_show.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_leg.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_servo.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/app/interface_demo1.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/pc/blockly_interface.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/pc/blockly_demo1.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/pc/blockly_demo2-1.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/pc/blockly_demo2-2.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/question/SdCodes.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/protocol/miniprotocol_board.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/protocol/miniprotocol_maincoordinate.png">
+<meta property="og:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/protocol/miniprotocol_legcoordinate.png">
+<meta property="article:published_time" content="2021-08-15T09:41:40.000Z">
+<meta property="article:modified_time" content="2021-11-18T06:40:35.439Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xgorobot.github.io/2021/08/15/XGOmini/produce/xgo-mini%E8%AF%B4%E6%98%8E%E4%B9%A61-1.png">
+
+
+<link rel="canonical" href="https://xgorobot.github.io/2021/08/15/XGOmini/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://xgorobot.github.io/2021/08/15/XGOmini/","path":"2021/08/15/XGOmini/","title":"XGO mini Quadruped robot dog data collection"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>XGO mini Quadruped robot dog data collection | Luwu Dynamics</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Luwu Dynamics</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-product"><a href="/product/" rel="section"><i class="fas fa-dog fa-fw"></i>Product</a></li>
+        <li class="menu-item menu-item-technology"><a href="/technology/" rel="section"><i class="fas fa-folder fa-fw"></i>Technology</a></li>
+        <li class="menu-item menu-item-wiki"><a href="https://www.xgorobot.com/XgoWiki-en/" rel="noopener" target="_blank"><i class="fas fa-archive fa-fw"></i>Wiki</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fas fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-switch_zh"><a href="https://www.xgorobot.com/XgoBlog-zh/" rel="noopener" target="_blank"><i class="fas fa-globe fa-fw"></i>中文</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-XGO-mini"><span class="nav-number">1.</span> <span class="nav-text">- What is XGO mini -</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#I-Product-Description"><span class="nav-number">1.1.</span> <span class="nav-text">I Product Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#II-Product-Data-and-Components"><span class="nav-number">1.2.</span> <span class="nav-text">II Product Data and Components</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#III-About-AI-Module"><span class="nav-number">1.3.</span> <span class="nav-text">III About AI Module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IV-Key-Technologies"><span class="nav-number">1.4.</span> <span class="nav-text">IV Key Technologies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#V-Learning-Contents"><span class="nav-number">1.5.</span> <span class="nav-text">V Learning Contents</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-use"><span class="nav-number">2.</span> <span class="nav-text">- How to use -</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#I-Operation-Instructions"><span class="nav-number">2.1.</span> <span class="nav-text">I Operation Instructions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#I-Illustration"><span class="nav-number">2.2.</span> <span class="nav-text">I Illustration</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-preparation"><span class="nav-number">2.2.1.</span> <span class="nav-text">1.preparation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Select-the-sample-program-and-experience-it"><span class="nav-number">2.2.2.</span> <span class="nav-text">2. Select the sample program and experience it</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Sample-Program"><span class="nav-number">2.2.3.</span> <span class="nav-text">3.Sample Program</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Sample-images-for-program"><span class="nav-number">2.2.4.</span> <span class="nav-text">4.Sample images for program</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#III-Mobile-Terminal"><span class="nav-number">2.3.</span> <span class="nav-text">III Mobile Terminal.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-summary"><span class="nav-number">2.3.1.</span> <span class="nav-text">1. summary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Detailed-module-solution"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.Detailed module solution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-Home-page"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">2.1.Home page</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-Control-interface"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">2.2.Control interface</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Detailed-function-solution"><span class="nav-number">2.3.3.</span> <span class="nav-text">3.Detailed function solution</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IV-PC-Terminal"><span class="nav-number">2.4.</span> <span class="nav-text">IV PC Terminal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Introduction"><span class="nav-number">2.4.1.</span> <span class="nav-text">1.Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Method"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.Method</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Consideration"><span class="nav-number">3.</span> <span class="nav-text">- Consideration  -</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#I-Precautions"><span class="nav-number">3.1.</span> <span class="nav-text">I Precautions:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#II-Maintenance-and-Storage"><span class="nav-number">3.2.</span> <span class="nav-text">II Maintenance and Storage:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#III-Regular-Faults-and-Troubleshooting"><span class="nav-number">3.3.</span> <span class="nav-text">III Regular Faults and Troubleshooting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IV-How-to-update-the-SD-card-file"><span class="nav-number">3.4.</span> <span class="nav-text">IV How to update the SD card file</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XGO-Mini-Communication-Protocol"><span class="nav-number">4.</span> <span class="nav-text">- XGO-Mini Communication Protocol -</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#I-Preface"><span class="nav-number">4.1.</span> <span class="nav-text">I Preface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#II-Background"><span class="nav-number">4.2.</span> <span class="nav-text">II Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#III-Software-interface"><span class="nav-number">4.3.</span> <span class="nav-text">III Software interface</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Communication-format"><span class="nav-number">4.3.1.</span> <span class="nav-text">1. Communication format</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Commands"><span class="nav-number">4.3.2.</span> <span class="nav-text">2.Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-Write-command-no-response-0x00"><span class="nav-number">4.3.2.1.</span> <span class="nav-text">2.1.Write command, no response (0x00)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-Read-command-0x02"><span class="nav-number">4.3.2.2.</span> <span class="nav-text">2.2.Read command (0x02)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Robot-coordinate-system"><span class="nav-number">4.3.3.</span> <span class="nav-text">3.Robot coordinate system</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-XGOLIB-Library"><span class="nav-number">5.</span> <span class="nav-text">- The XGOLIB Library  -</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#I-XGO-Class"><span class="nav-number">5.1.</span> <span class="nav-text">I XGO Class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#II-Mobile-related-methods"><span class="nav-number">5.2.</span> <span class="nav-text">II Mobile related methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Front-and-back-left-and-right-translation"><span class="nav-number">5.2.1.</span> <span class="nav-text">1.Front and back, left and right translation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-revolve"><span class="nav-number">5.2.2.</span> <span class="nav-text">2.revolve</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-mark-time"><span class="nav-number">5.2.3.</span> <span class="nav-text">3.mark time</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-step-frequency"><span class="nav-number">5.2.4.</span> <span class="nav-text">4.step frequency</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-stop"><span class="nav-number">5.2.5.</span> <span class="nav-text">5.stop</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#III-Position-Methods"><span class="nav-number">5.3.</span> <span class="nav-text">III Position Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Body-position-translation"><span class="nav-number">5.3.1.</span> <span class="nav-text">1.Body position translation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Body-posture-adjustment"><span class="nav-number">5.3.2.</span> <span class="nav-text">2.Body posture adjustment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Body-cycle-translation"><span class="nav-number">5.3.3.</span> <span class="nav-text">3.Body cycle translation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Body-cycle-rotation"><span class="nav-number">5.3.4.</span> <span class="nav-text">4.Body cycle rotation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IV-The-rest-methods"><span class="nav-number">5.4.</span> <span class="nav-text">IV The rest methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Restore-the-initial-state"><span class="nav-number">5.4.1.</span> <span class="nav-text">1.Restore the initial state</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Set-the-self-stabilization"><span class="nav-number">5.4.2.</span> <span class="nav-text">2.Set the self-stabilization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Single-Leg"><span class="nav-number">5.4.3.</span> <span class="nav-text">3.Single Leg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Servo-Control"><span class="nav-number">5.4.4.</span> <span class="nav-text">4.Servo Control</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Uninstall-the-single-leg-Servo"><span class="nav-number">5.4.5.</span> <span class="nav-text">5.Uninstall the single leg Servo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-All-Servo-are-uninstalled"><span class="nav-number">5.4.6.</span> <span class="nav-text">6.All Servo are uninstalled</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-Single-leg-Servo-loading"><span class="nav-number">5.4.7.</span> <span class="nav-text">7.Single leg Servo loading</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-All-Servo-are-loaded"><span class="nav-number">5.4.8.</span> <span class="nav-text">8.All Servo are loaded</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-Set-the-Servo-rotation-speed"><span class="nav-number">5.4.9.</span> <span class="nav-text">9.Set the Servo rotation speed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-Perform-a-preset-action"><span class="nav-number">5.4.10.</span> <span class="nav-text">10.Perform a preset action</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#V-Read-methods"><span class="nav-number">5.5.</span> <span class="nav-text">V Read methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Read-the-Servo"><span class="nav-number">5.5.1.</span> <span class="nav-text">Read the Servo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Read-the-battery"><span class="nav-number">5.5.2.</span> <span class="nav-text">Read the battery</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt=""
+      src="/images/xgo_icon1024.png">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Xgorobot" title="GitHub https:&#x2F;&#x2F;github.com&#x2F;Xgorobot → https:&#x2F;&#x2F;github.com&#x2F;Xgorobot" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub https://github.com/Xgorobot</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:hello@xgorobot.com" title="E-Mail hello@xgorobot.com → mailto:hello@xgorobot.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail hello@xgorobot.com</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/Xgorobot" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://xgorobot.github.io/2021/08/15/XGOmini/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xgo_icon1024.png">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luwu Dynamics">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          XGO mini Quadruped robot dog data collection
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-08-15 17:41:40" itemprop="dateCreated datePublished" datetime="2021-08-15T17:41:40+08:00">2021-08-15</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-11-18 14:40:35" itemprop="dateModified" datetime="2021-11-18T14:40:35+08:00">2021-11-18</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <style type="text/css">
+    title1 {color:white;background-color:black;}
+</style>
+
+<h1 id="What-is-XGO-mini"><a href="#What-is-XGO-mini" class="headerlink" title="- What is XGO mini -"></a><center><title1>- What is XGO mini -</title1></center></h1><h2 id="I-Product-Description"><a href="#I-Product-Description" class="headerlink" title="I Product Description"></a>I Product Description</h2><p><img src="produce/xgo-mini%E8%AF%B4%E6%98%8E%E4%B9%A61-1.png" alt="descripsion1-1" title="descripsion1-1"><br>&emsp;&emsp;XGO-mini is a desktop AI robot dog with 12 DOFs inlaid with Kendryte K210 chip for AI edge computing applications. It supports omni-directional movement, 6D posture control, posture stability, and multiple sports gaits, internally equipped with 9-axis IMU, joint position sensors and current sensors to feed back its own postures, joint rotation and torque for internal algorithms and secondary development. The robot dog allows for graphic and python programming on APP or PC, so as to develop AI applications.<br><br></p>
+<h2 id="II-Product-Data-and-Components"><a href="#II-Product-Data-and-Components" class="headerlink" title="II Product Data and Components"></a>II Product Data and Components</h2><p><strong>Product Data</strong><br>Model: XGO-mini Programmable Robot Dog<br>Dimensions: 250x150x60mm<br>Weight: 700g<br>Battery: 7.4V 2500mAh lithium battery<br>Material: Body-1.5mm aviation aluminum  Legs-Silicone &amp; Nylon<br>Processor: K210+STM32<br>Screen: 240*240 pixel full-color LCD<br>Camera: 0.3 mega pixels OV2640<br>Storage: 4G SD card<br>Charger rated input: 100-240V~50-60Hz<br>Charger rated output: 8.4V 1A</p>
+<p><strong>Product Components</strong><br><img src="produce/xgo-mini%E8%AF%B4%E6%98%8E%E4%B9%A61-2.png" alt="descripsion1-2" title="descripsion1-2"><br>①AI module<br>②AI module bracket<br>③Front cover<br>④Back cover<br>⑤Self-locking switch<br>⑥18650 2S battery<br>⑦Core drive board<br>⑧Bottom cover<br>⑨Charge jack<br>⑩Metal high-speed magnetic encoding bus steering mechanism<br><br></p>
+<h2 id="III-About-AI-Module"><a href="#III-About-AI-Module" class="headerlink" title="III About AI Module"></a>III About AI Module</h2><!-- ![explain1-3](produce/xgo-mini说明书1-3.png "explain1-3") -->
+<p>&emsp;&emsp;As the master control module for AI-related applications, the AI module comes with the features of basic computer vision recognition and machine learning model inference, which can facilitate the entry and advanced-level AI applications.<br><strong>AI module</strong><br>&emsp;&emsp;(1)Built-in Kendryte K210 chip, featured RISC-V processor architecture, audio-visual, standalone IP core and strong programmability.<br>&emsp;&emsp;(2)Support images, audio, video, machine learning models and other types of materials stored in a Micro SD card;<br>&emsp;&emsp;(3)The integrated camera module jack is used for front shooting.<br><strong>Screen module</strong><br>&emsp;&emsp;(1)The integrated camera module jack is provided for rear shooting;<br>&emsp;&emsp;(2)1.54’’ LCD full-color screen can display pictures in JPG, BMP and other formats;<br>&emsp;&emsp;(3)External 2.5mm audio interface;<br>&emsp;&emsp;(4)Onboard power amplifier chip and speaker, support the playback of audio files in WAV format.<br><strong>Camera module</strong><br>&emsp;&emsp;The AI camera resolution is 0.3 mega pixels and can be plugged into the screen module or AI module, functioning as front or rear camera.<br><br></p>
+<h2 id="IV-Key-Technologies"><a href="#IV-Key-Technologies" class="headerlink" title="IV Key Technologies"></a>IV Key Technologies</h2><!-- ![explain1-4](produce/xgo-mini说明书1-4.png "explain1-4") -->
+<p><strong>IMU posture self-stabilization</strong><br>&emsp;&emsp; Based on the attitude data obtained from IMU and with closed loop control, the robot dog can stay stabilized no matter how the surface shakes.<br>**6 DOFs posture control **<br>&emsp;&emsp;With foot tips fixed, the whole body is under 6 DOFs motion control.<br><strong>IMU posture smoothing</strong><br>&emsp;&emsp; Based on the attitude data obtained from IMU and with closed loop control, the robot dog can adapt to external force and adjust to target posture of hand motion, so that it can deliver demo teaching.<br><strong>User communication and secondary programming interface</strong><br>&emsp;&emsp;The open-access underlying serial port protocol applies to secondary development and verification.<br><strong>Motion gait planning</strong><br>&emsp;&emsp;Low, medium and high posture which the robot dog comes with is linked to three different speeds, appropriate gait strategies and rules are applied.<br><strong>Kinematics and dynamics simulation interface</strong><br>&emsp;&emsp;In the ros scenario, kinematics and dynamics simulations are conducted on rviz and gazebo platforms.<br><strong>Omni-directional motion control</strong><br>&emsp;&emsp;With 12 active joints and through kinematics decoupling, the robot dog can realize the omni-directional omotion  of forward shift and rotation and support the superposition of motions from different directions.<br><strong>AI</strong><br>&emsp;&emsp;Machine vision, face recognition, speech recognition, model training and other AI functions.<br><br></p>
+<h2 id="V-Learning-Contents"><a href="#V-Learning-Contents" class="headerlink" title="V Learning Contents"></a>V Learning Contents</h2><!--  ![explain1-5](produce/xgo-mini说明书1-5.png "explain1-5") -->
+<p><strong>Mechanics:Motor and drive</strong><br>&emsp;&emsp;Composed of micro-sized servo unit structure, 6 DOFs motion analysis ,Single-leg 3 DOFs motion analysis<br><strong>Motion:Motion and drive</strong><br>&emsp;&emsp;Derived forward and inverse kinematics, complete Cartesian space control and joint space control<br><strong>Sensing:Gyroscope + acceleration + magnetometer</strong><br>&emsp;&emsp;The joint position and speed of the robot dog, Torque (current) and other sensors<br><strong>Control:Control theory and control planning</strong><br>&emsp;&emsp;PID control, trajectory planning control, space posture stability control<br><strong>Intelligence:Robot dog intelligence</strong><br>&emsp;&emsp;Machine vision, speech recognition, face recognition,Face detection and color recognition and other AI skills<br><strong>Simulation:Simulation practice</strong><br>&emsp;&emsp;Kinematics and dynamics simulation</p>
+<hr>
+<br>
+
+
+<h1 id="How-to-use"><a href="#How-to-use" class="headerlink" title="- How to use -"></a><center><title1>- How to use -</title1></center></h1><h2 id="I-Operation-Instructions"><a href="#I-Operation-Instructions" class="headerlink" title="I Operation Instructions"></a>I Operation Instructions</h2><p><img src="produce/xgo-mini%E8%AF%B4%E6%98%8E%E4%B9%A62-1.png" alt="explain2-1" title="explain2-1"></p>
+<h2 id="I-Illustration"><a href="#I-Illustration" class="headerlink" title="I Illustration"></a>I Illustration</h2><h3 id="1-preparation"><a href="#1-preparation" class="headerlink" title="1.preparation"></a>1.preparation</h3><p>&emsp;&emsp;Spread the XGO and press the power button, the machine dog enters the default standing initial state, when the screen appears as shown in the figure below.<br><img src="produce/minidemo_main.png" alt="screen" title="screen"><br>&emsp;&emsp;There are 4 information in the initial interface to master, and the position of the A, B and C keys on the module is shown in the figure above.<br>&emsp;&emsp;(1) Firmware version: It indicates the firmware version number of the current AI module, and you can download the latest version of the firmware and tools on the official website.<br>&emsp;&emsp;(2) Operation instructions: A and B keys control interface menu options switch, C key indicates the confirmation operation, extended press C to exit the current program.<br>&emsp;&emsp;(3) Run the last program: When you upload the program to the AI module, you can choose this option to let the AI module run the latest upload program;<br>&emsp;&emsp;(4) Try the Sample program: Select this option to go to the next interface and experience the sample program stored in the SD card of the AI module.</p>
+<h3 id="2-Select-the-sample-program-and-experience-it"><a href="#2-Select-the-sample-program-and-experience-it" class="headerlink" title="2. Select the sample program and experience it"></a>2. Select the sample program and experience it</h3><p>&emsp;&emsp;According to the initial interface instructions, the operation module enters the attempt sample program interface, and the key order should be: B-&gt;C.The operation keys of the sample program list interface are the same as the initial interface. There are 3 information to master.<br>&emsp;&emsp;(1) Type of sample program: the sample program is divided into visual and speech classes.<br>&emsp;&emsp;(2) Sample Program List: The selected sample program has a white box and the name appears;<br>&emsp;&emsp;(3) the sample program number: There are 17 sample programs for this firmware version, the number on the left side of the slash is the serial number of the selected sample program, and the number to the right side of the slash is the total number of the sample program.<br>&emsp;&emsp;The same as the initial interface, we use A, B, C keys to operate the sample program list interface:<br>&emsp;&emsp;A : Up sample program, B : Next sample program / page turning<br>&emsp;&emsp;C : Select the sample program and load, extended press C : Exit the sample program to the main menu.</p>
+<h3 id="3-Sample-Program"><a href="#3-Sample-Program" class="headerlink" title="3.Sample Program"></a>3.Sample Program</h3><table>
+<thead>
+<tr>
+<th>serial number</th>
+<th>sample program</th>
+<th>Function and operation introduction</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Dog Show</td>
+<td>go to the program, the screen module will roll on EMOJI and the robot dog enters the show mode (to execute a plurality of actions).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Face Detection</td>
+<td>go to the program, the AI module will detect a face in the picture. If a human face is detected, the screen module will frame out the face in the picture by a rectangular box, and the robot dog makes handshaking action.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Facial Recognition</td>
+<td>go to the program, the AI module can recognize, frame out a face and mark key points; press “B” to take picture and mark it as “master”, up to 3 pictures of the human face can be taken, mark as “master”, “friend1”, and “friend2” respectively. Once the camera re-captures the face that has been marked, the frame will turn green and show the mark and confidence level (to what extent the face is exactly as marked). If the face marked as “master” is recognized, the robot dog will rotate around three axes.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Face Tracking</td>
+<td>go to the program, the AI module will execute face recognition. Referring to the face position in the picture, the robot dog will automatically align the center of the screen to the face, until the face following effect is attained.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Mask Detection</td>
+<td>go to the program, the AI module will execute mask defection and identify whether the figure in the picture is wearing a mask or not; if there is no mask detected, the figure will be framed out in red box with the confidence level of detection indicated, and the robot dog will make head-shaking action; if there is a mask detected, the figure will be framed out in green box with the confidence level of detection indicated, and the robot dog will make head-nodding action; if the confidence level of detection is less than a given value, then the figure will be framed out in blue box.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Finger Guessing</td>
+<td>go to the program, the module recognizes the hand in the picture, and depending on the different gestures of the hand, the machine dog shows the machine dog guessing victory pictures.(In order to improve the identification accuracy, please try to ensure the simple background and sufficient light when using.)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Hand Gesture</td>
+<td>go to the program, the module will identify the hand in the picture, and according on the different gestures of the hand, the machine dog will make different movements.The e. g. gesture-action; fist-turn ring; refuse-lie down; scissor hand-three-axis linkage; number 6-wave; ok-sit down.(In order to improve the identification accuracy, please try to ensure the simple background and sufficient light when using.)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Hand Tracking</td>
+<td>go to the program, the AI module will execute hand recognition and can recognize, frame out the hand. Referring to the hand position in the picture, the robot dog will automatically align the center of the screen to the face, until the hand following effect is attained.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Traffic sign Detection</td>
+<td>go to the program, the module begins to identify the traffic signs. The identifiers include: “Go straight”, “Stop”, “No entry” and “Park” (the logo can see 1. Traffic signs below); After the identification, the machine dog will perform the corresponding actions: forward, standing, back and sit down.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Traffic light Detection</td>
+<td>go to the program, when the module recognizes the green light, it will be identified on the screen with a green sign, and the machine dog begins to go straight; When the module recognizes the red light, it will be identified with a red sign on the screen, and the machine dog stops moving.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Image Classification</td>
+<td>go to the program, the AI module will recognize common objects. Once recognized, the common object will be framed out in the picture with the name of the recognized object marked; if no object is recognized, “Nothing Detected” will be prompted. In addition, when the identified object is “person”, the robot dog will execute swaying action; when the identified object is “dog”, the robot dog will execute peeing action; when the identified object is “act”, then the robot dog will rotate around three axes.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Bone Recognition</td>
+<td>go to the program, the screen will prompt for taking picture of a bone, press “B” to take pictures of the bone (5 pictures), then the screen will prompt for taking pictures of the vegetable, press “B” to take pictures of the vegetable (5 pictures). After sampling, the AI module will recognize the bone and vegetable. When a bone is recognized, a marking will appear on the screen and the robot dog executes food-finding action; when a vegetable is recognized, a marking will appear on the screen and the robot dog executes standing action.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Regional Color Analyze</td>
+<td>go to the program, colored area blocks will appear in the center of the screen, and the color value and blocks in the area will be displayed on the top of the screen.</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Learn &amp; Find Color</td>
+<td>go to the program, start auto capturing and learning the color of the center area on the current screen (the display lasts for about 2 secs); subsequently enter the tracking stage, the area appearing the similar color as the learning content on the screen will be detected and marked.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Track Square</td>
+<td>go to the program, the module will recognize the color block (pure color block) in the picture, and will adjust their position according to the color block and their own relative position.(The brighter the color block, the better)</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Find QR Code and Decode</td>
+<td>go to the program, when a QR code appears on the screen, the module will mark it and display the decoded text content on the top. If the text is a specific command statement (see 2. QR code below), then the machine dog performs the corresponding action.</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Speech Recording</td>
+<td>After entering the program, start recording. Each audio needs to be recorded three times. The following words need to be recorded in order:”Eat”,”Hand”,”Turn”,”Down”,”Sit”,”Bye”</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Speech Recognition</td>
+<td>After entering the program, the module starts to recognize the audio and makes different actions according to the recognized audio</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Sound Spectrum Analyze</td>
+<td>go to the program, the screen module will display the audio acquired by microphone, and the robot dog will execute an action in line with the audio. More details are described below: when low sound is acquired (framed out in red circle), the robot dog will execute lying action; when low-to-mid sound is acquired (framed out in green circle), the robot dog will execute stretching action; when mid-to-high sound is acquired (framed out in blue circle), the robot dog will execute sitting action; when high sound is acquired (framed out in purple circle), the robot dog will execute standing action.</td>
+</tr>
+</tbody></table>
+<h3 id="4-Sample-images-for-program"><a href="#4-Sample-images-for-program" class="headerlink" title="4.Sample images for program"></a>4.Sample images for program</h3><p>(1) Traffic sign image<br><a href="trafficsign/trafficsign.zip" title="Traffic sign image">-Traffic sign image-</a></p>
+<table>
+<thead>
+<tr>
+<th>Num</th>
+<th>Image</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><img src="trafficsign/goforward.png" alt="goforward" style="zoom:80%;" /></td>
+<td>Forward 2 seconds</td>
+</tr>
+<tr>
+<td>2</td>
+<td><img src="trafficsign/stop.png" alt="stop" style="zoom:100%;" /></td>
+<td>Lie down</td>
+</tr>
+<tr>
+<td>3</td>
+<td><img src="trafficsign/forbid.png" alt="forbid" style="zoom:100%;" /></td>
+<td>Back off</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="trafficsign/park.png" alt="park" style="zoom:100%;" /></td>
+<td>Sit down</td>
+</tr>
+</tbody></table>
+<p>(2) QR code image<br><a href="qrcode/qrcode.zip" title="QR code image">-QR code image-</a></p>
+<table>
+<thead>
+<tr>
+<th>Num</th>
+<th>decoded text</th>
+<th>QR code</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>hello</td>
+<td><img src="qrcode/hello.png" alt="hello" style="zoom:50%;" /></td>
+<td>Wave</td>
+</tr>
+<tr>
+<td>2</td>
+<td>sit down</td>
+<td><img src="qrcode/sitdown.png" alt="sit down" style="zoom:50%;" /></td>
+<td>Sit down</td>
+</tr>
+<tr>
+<td>3</td>
+<td>go forward</td>
+<td><img src="qrcode/goforward.png" alt="go forward" style="zoom:50%;" /></td>
+<td>Forward 2 seconds</td>
+</tr>
+<tr>
+<td>4</td>
+<td>go backward</td>
+<td><img src="qrcode/gobackward.png" alt="go backward" style="zoom:50%;" /></td>
+<td>Back off 2 seconds</td>
+</tr>
+<tr>
+<td>5</td>
+<td>turn left</td>
+<td><img src="qrcode/turnleft.png" alt="turn left" style="zoom:50%;" /></td>
+<td>Turn left</td>
+</tr>
+<tr>
+<td>6</td>
+<td>turn right</td>
+<td><img src="qrcode/turnright.png" alt="turnright" style="zoom:50%;" /></td>
+<td>Turn right</td>
+</tr>
+<tr>
+<td>7</td>
+<td>show</td>
+<td><img src="qrcode/show.png" alt="show" style="zoom:50%;" /></td>
+<td>Dog show on</td>
+</tr>
+</tbody></table>
+<h2 id="III-Mobile-Terminal"><a href="#III-Mobile-Terminal" class="headerlink" title="III Mobile Terminal."></a>III Mobile Terminal.</h2><h3 id="1-summary"><a href="#1-summary" class="headerlink" title="1. summary"></a>1. summary</h3><p>&emsp;&emsp;This software is a robot controller developed by Luwu Intelligence. The software connects Bluetooth and robot through mobile phones to data communication, providing users with convenient and simple remote control interface and a variety of other control methods, and greatly facilitates users’ control of the robot.<br>&emsp;&emsp;The software can be used without login, after installed search and match robot equipment and identify the types of robots.<br>&emsp;&emsp;The software is generally divided into four parts: Main page, Bluetooth interface, Setup interface and Control interface.The portal to other interfaces is provided on the home interface; interactive function with Bluetooth connection of the robot; the setting interface provides options to change APP settings; and the control interface provides a variety of remote control functions.<br><img src="app/interfaces.png" alt="interfaces" title="interfaces"><br>&emsp;&emsp;Software is suitable for mobile phones above Android 4.4 (including) systems.</p>
+<h3 id="2-Detailed-module-solution"><a href="#2-Detailed-module-solution" class="headerlink" title="2.Detailed module solution"></a>2.Detailed module solution</h3><h4 id="2-1-Home-page"><a href="#2-1-Home-page" class="headerlink" title="2.1.Home page"></a>2.1.Home page</h4><p>&emsp;&emsp;Click on the software icon, and enter the APP.<br><img src="app/interface_hello.png" alt="hello" title="hello"><br>&emsp;&emsp;First of all, users will see the welcome interface as the picture above, the interface background picture is the Luwu intelligent mini version of the quadruped robot, but also shows the version number of the current software.The welcome interface lasts for 3 seconds and goes to the home page.<br><img src="app/interface_main.png" alt="main" title="main"><br>&emsp;&emsp;The main page provides access to the other interfaces, as shown above, as described below:<br>&emsp;&emsp;1）Bluetooth: If there is no robot device connected at this time, click the Bluetooth button will enter the Bluetooth connection interface, you can search and connect the robot device.<br><img src="app/interface_btconnect.png" alt="bluetooth1" title="bluetooth1"><br>&emsp;&emsp;Note: Bluetooth of the mobile phone is needed here. On opening for the first time, the user needs to authorize the corresponding permission of the APP, otherwise the Bluetooth function will not be used normally.When entering the Bluetooth connection interface, if the phone Bluetooth is not open, the user will be prompted to open Bluetooth, otherwise the function will not use Bluetooth normally.<br>&emsp;&emsp;The Bluetooth connection interface is shown in the figure below.Shake the phone, and the APP will automatically connect to the nearest robotic device.<br><img src="app/interface_btshake.png" alt="bluetooth2" title="bluetooth2"><br>&emsp;&emsp;If there are multiple devices nearby or users want to connect the device through the robot name, click the search button, after a period of search, all available devices nearby will be listed, as shown in the figure below, click a device name to connect the device.<br><img src="app/interface_btsearch.png" alt="bluetooth3" title="bluetooth3"><br>&emsp;&emsp;If the robot device has been connected at this time, click the Bluetooth button to pop up the window shown in the figure below, and the user can disconnect the connection.<br><img src="app/interface_btconnected.png" alt="bluetooth4" title="bluetooth4"><br>&emsp;&emsp;2) Calibration: Click the calibration button to enter the calibration interface to reset the initial position of the robot.After reading carefully, click I know, click to enter the calibration mode button, at this time the robot will no longer output torque, external force can rotate, the user needs to put the robot as the specified position (see the secondary development manual), and then click the complete calibration button, the robot will record the current position as the initial position and automatically complete the restart.<br>&emsp;&emsp;Note: The calibration button is hidden by default in the main interface. The user can cancel the hidden in the Settings interface. See the Settings section for details.This operation is a professional user operation, the operation is irreversible, please read the instructions carefully after the operation.<br><img src="app/interface_calibration.png" alt="calibration" title="calibration"><br>&emsp;&emsp;3）Settings: Click the Settings button to enter the Settings interface. As shown in the figure below, users can set “whether the APP will automatically close Bluetooth” and the setting language (currently only Chinese and English)<br><img src="app/interface_setting.png" alt="setting" title="setting"><br>&emsp;&emsp;Note When running this project as a developer is selected as an option, the calibration button on the main interface is unhidden.<br>&emsp;&emsp;About: Click the About button to enter the About interface and see more information about this product.<br><img src="app/interface_about.png" alt="about" title="about"><br>&emsp;&emsp;5）Control interface: Click the performance mode, complete machine control, single-leg control and rudder machine control buttons to enter different control interfaces respectively. Slide and switch different modes from left and right in the main page. You can control the connected robot equipment in real time. Please refer to the next section for details.</p>
+<h4 id="2-2-Control-interface"><a href="#2-2-Control-interface" class="headerlink" title="2.2.Control interface"></a>2.2.Control interface</h4><p>&emsp;&emsp;The control interface enables the user to directly control the robot in different ways, equivalent to the user having multiple remote controls, respectively described as follows:<br><img src="app/interface_controlnormal.png" alt="controlnormal" title="controlnormal"><br><img src="app/interface_controlsenior.png" alt="senior" title="senior"><br>&emsp;&emsp;1）Machine control: complete machine control provides four modes of operation. Ordinary users control the movement and rotation of the robot through the button; advanced users control the movement and rotation of the robot through the rocker; XYZ allows users to control the 3D translation of the robot body through the rocker; PRY allows users to control the three-dimensional rotation of the robot body through the rocker.In addition, you can also control the height of the robot by dragging the lower sliding bar, and change the movement mode, open and close the gyroscope by clicking the upper right corner button.The blue dial displays the current device power, with 0 when the device is not connected; the red dial displays the current speed.The top two graphs give the ordinary and advanced interfaces.<br><br><img src="app/interface_show.png" alt="show" title="show"><br>&emsp;&emsp;2）Performance mode: the user allows the robot to perform the corresponding actions by clicking each button, click the rotation robot will perform all actions repeatedly, and click the Reset robot will restore the initial state.<br><br><img src="app/interface_leg.png" alt="leg" title="leg"><br>&emsp;&emsp;3）Single leg control: The interface allows users to directly control a leg of the robot by changing the three-dimensional coordinate system by selecting the leg to control and then dragging the sliding lever.<br><br><img src="app/interface_servo.png" alt="servo" title="servo"><br>&emsp;&emsp;4）Servo control: the interface allows the user to directly control a certain steering machine of the robot, changing the angle of the corresponding steering machine by selecting the position to control the rudder machine and then dragging the sliding lever.<br></p>
+<h3 id="3-Detailed-function-solution"><a href="#3-Detailed-function-solution" class="headerlink" title="3.Detailed function solution"></a>3.Detailed function solution</h3><p>&emsp;&emsp;Example of controlling the robot forward function using a remote control<br><img src="app/interface_demo1.png" alt="demo1" title="demo1"><br>&emsp;&emsp;1）Enter the APP, and click the Bluetooth button after entering the main page. As shown in the picture above, click to open Bluetooth, enter the Bluetooth connection interface, and shake the phone. The APP will automatically connect to the robot device and jump to the main interface.<br>&emsp;&emsp;2）After the connection is successful, click the control button of the whole machine to enter the remote control interface. Take the ordinary control mode as an example, click the left upward button, you will see the robot moving forward, release the button and the robot to stop the movement.<br>&emsp;&emsp;3）Click the return button in the top left corner to return to the main interface, and click the Bluetooth button to disconnect.Two consecutive return clicks to exit the APP.</p>
+<h2 id="IV-PC-Terminal"><a href="#IV-PC-Terminal" class="headerlink" title="IV PC Terminal"></a>IV PC Terminal</h2><h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1.Introduction"></a>1.Introduction</h3><p>&emsp;&emsp;XGOEdu is a visual building block programming platform developed for XGO.Users can write programs graphically, and they can also read or write Python programs directly.The program can be written and can be executed online or uploaded to the AI module.With the platform, users can enable AI for their projects without networking the hardware.<br>&emsp;&emsp;The platform builds on providing introductory Python syntax (logic, loop, mathematical operations, variables, word processing, list, dictionary, tuples, collection, functions, file operation, time), and also provides different categories of functions related to module programming, such as: serial port input and output, input and output, button / LED lamp control, microphone data acquisition, camera control, audio and video processing, model use (including face recognition, face recognition, face recognition, object recognition, object classifier, handwritten digital recognition).<br>&emsp;&emsp;Users can also train TinyYOLO-based models or MobileNET. After the format conversion through our platform, they will be able to program through the programming platform and run directly on XGO AI module.</p>
+<h3 id="2-Method"><a href="#2-Method" class="headerlink" title="2.Method"></a>2.Method</h3><p>&emsp;&emsp;The XGO-Blockly Graphical Programming Tool is interface-friendly and can be used to learn artificial intelligence, Internet of Things and Python base.This tool allows you to program and upload programs to modules in the AI module.<br><img src="pc/blockly_interface.png" alt="interface" title="interface"><br>&emsp;&emsp;In the figure above, we divide the XGO-Blockly programming interface into six regions:<br>&emsp;&emsp;(1) Document access area: program project named, saved (saved as. xml), delete all blocks and all blocks<br>&emsp;&emsp;(2) Auxiliary area: sample loading, project file import and export, and language setting<br>&emsp;&emsp;(3) Block instruction area: except for the base building blocks (from “logic” to “communication of serial port”), with different expansion building blocks in different modes.<br>&emsp;&emsp;(4) Block: Drag blocks into this area for programming.<br>&emsp;&emsp;(5) Python programming area: When the user drags the blocks into the block programming area, the corresponding Python source code will be generated here to support users to edit, copy, download and upload the code.<br>&emsp;&emsp;(6) Upload area: users can choose to use the wired upload mode.</p>
+<p><strong>Programming experience 1: Display the Hello World in the screen module!</strong><br>&emsp;&emsp;First, turn on the XGO-Blockly.<br>&emsp;&emsp;Then connect the module and the computer with the data cable to check whether the upload area shows the green box + pair sign, and the serial port display with the COM + number.<br>&emsp;&emsp;After the two items are guaranteed, you can start programming.<br>&emsp;&emsp;Click the following instructions in the block instruction area and drag them to the block programming area:<br>&emsp;&emsp;(1) Extension module | Screen: “screen initialization”, “create a blank canvas”, “set the canvas coordinates”<br>&emsp;&emsp;(2) Loop: Repeat Always<br>&emsp;&emsp;(3) Extension module | Screen: Screen Text and enter Hello World!”<br>&emsp;&emsp;(4) Extension Module | Screen: Show Canvas<br>&emsp;&emsp;(Text Size can be changed by modifying the number; color optional, select white here)<br><img src="pc/blockly_demo1.png" alt="demo1" title="demo1"><br><strong>Programming experience 2: XGO mini custom face recognition</strong><br>&emsp;&emsp;First, turn on the XGO-Blockly.<br>&emsp;&emsp;Then connect the module and the computer with the data cable to check whether the upload area shows the green box + pair sign, and the serial port display with the COM + number.<br>&emsp;&emsp;After the two items are guaranteed, you can start programming.<br>&emsp;&emsp;Click the following instructions in the block instruction area and drag them to the block programming area:<br>&emsp;&emsp;(1) Machine dog: “Machine dog initialization”<br><img src="pc/blockly_demo2-1.png" alt="demo2-1" title="demo2-1"><br>&emsp;&emsp;(2) Loop: Repeat Always<br>&emsp;&emsp;(3) Artificial intelligence | AI model: experimental function “custom initialization face recognition model”<br>&emsp;&emsp;(4) Logic: “If”  “=”<br>&emsp;&emsp;(5) Text: Fill in Name1<br>&emsp;&emsp;(6) Artificial intelligence | AI model: the experimental function “identified the object of the face model”<br>&emsp;&emsp;(7) Machine dog: “Machine dog execute instruction” selection action<br><img src="pc/blockly_demo2-2.png" alt="demo2-2" title="demo2-2"><br>&emsp;&emsp;The case is located in Samples-&gt; Machine Dog Case-&gt; Machine Dog-facial recognition</p>
+<hr>
+<br>
+
+<h1 id="Consideration"><a href="#Consideration" class="headerlink" title="- Consideration  -"></a><center><title1>- Consideration  -</title1></center></h1><h2 id="I-Precautions"><a href="#I-Precautions" class="headerlink" title="I Precautions:"></a>I Precautions:</h2><p>&emsp;&emsp;1. Unplug the unit if left unused. When charging, always use the specified charger model.<br>&emsp;&emsp;2. This product enclosure is made of metal, be aware of safety in use and avoid finger from getting wounded in motion.<br>&emsp;&emsp;3. Avoid the exposure to humid environment and avoid falling from height.<br>&emsp;&emsp;4. The steering mechanism may be heated after the robot dog moves for a long time, it is considered as normal, but persistent heating may compromise the properties of the steering mechanism, it is advised not to use the unit for a long time. </p>
+<h2 id="II-Maintenance-and-Storage"><a href="#II-Maintenance-and-Storage" class="headerlink" title="II Maintenance and Storage:"></a>II Maintenance and Storage:</h2><p>&emsp;&emsp;Note: Turn off the power before starting maintenance<br>&emsp;&emsp;1. Wipe the exposed surface of the robot dog and keep the control board away from water.<br>&emsp;&emsp;2. Check whether the screws become loose and tighten if so.<br>&emsp;&emsp;3. For transportation or storage, use XGO special packaging box to avoid accidental damage; four legs should be securely fixed to avoid friction from vibration.</p>
+<h2 id="III-Regular-Faults-and-Troubleshooting"><a href="#III-Regular-Faults-and-Troubleshooting" class="headerlink" title="III Regular Faults and Troubleshooting"></a>III Regular Faults and Troubleshooting</h2><table>
+<thead>
+<tr>
+<th>Fault</th>
+<th>Possible Cause</th>
+<th>Handling</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>The ON/OFF indicator is unlit after the unit is turned on</td>
+<td>Run out of battery or low level of battery</td>
+<td>Charge with power adapter</td>
+</tr>
+<tr>
+<td>The ON/OFF indicator is lit but no action is executed after the unit is turned on</td>
+<td>The control system goes wrong or the system is in calibration mode</td>
+<td>Contact our after-sales service for repair service</td>
+</tr>
+<tr>
+<td>The standing posture is seriously offset</td>
+<td>The initial position is offset from the predefined value</td>
+<td>Recalibrate according to special operation notes</td>
+</tr>
+<tr>
+<td>A joint has no torque output</td>
+<td>The steering mechanism is damaged</td>
+<td>Contact our after-sales service for repair service</td>
+</tr>
+</tbody></table>
+<h2 id="IV-How-to-update-the-SD-card-file"><a href="#IV-How-to-update-the-SD-card-file" class="headerlink" title="IV How to update the SD card file"></a>IV How to update the SD card file</h2><p>&emsp;&emsp;take out the SD card and read the SD card file on the PC through the SD card reader. The general directory is as follows. After the original content is completely cleared, the new content and the directory structure remains unchanged (new content in the SD card).<br><img src="question/SdCodes.png" alt="SdCodes"></p>
+<!-- ## V How to update hex file -->
+<hr>
+<br>
+
+<h1 id="XGO-Mini-Communication-Protocol"><a href="#XGO-Mini-Communication-Protocol" class="headerlink" title="- XGO-Mini Communication Protocol -"></a><center><title1>- XGO-Mini Communication Protocol -</title1></center></h1><p><em>Version： V1.0</em><br><em>Date Issued： 2021/08/05</em></p>
+<table>
+    <tr>
+        <th>Date</th><th>Reason</th><th>Author</th>
+    </tr>
+    <tr>
+        <td>2021/08/05</td><td>Create and issue document</td><td>Lin Tao</td>
+    </tr>
+</table>
+
+<h2 id="I-Preface"><a href="#I-Preface" class="headerlink" title="I Preface"></a>I Preface</h2><p>&emsp;&emsp;This document applies to the communication protocol for command/data integration between XGO upper host and the robot dog. The communication protocol is based on standard TTL serial communication and features XH2.54 4PIN interface connection.  </p>
+<h2 id="II-Background"><a href="#II-Background" class="headerlink" title="II Background"></a>II Background</h2><p>&emsp;&emsp;XGO-Mini is a desktop-sized AI quadruped robot with 12 DOFs which can achieve omnidirectional movement, 6D posture control, stable posture, and a variety of motions.  Equipped with a 9-axis IMU, its joint position sensor and electric current sensor is able to reflect to its own posture and joint rotation angle and torque, which are used for algorithms verification and exploitation.<br>&emsp;&emsp;Unscrew 2 screws on the back, 2 screws on the left and right, and 2 screws at the tail with a hex screwdriver, detach the back panel of the robot dog, unplug the power cord with caution.<br>&emsp;&emsp;As shown below, there are 2 serial communication interfaces at one side of the motherboard, connect interfaces by the line sequence printed on the motherboard and the host computer, then start the testing procedure. External supply voltage at two terminals is 5V and 3.3V respectively, but both are not allowed to use simultaneously.<br>&emsp;&emsp;In default mode, 3.3V terminal is occupied by the AI ​​module. Unplug the AI ​​module terminal if you intend to use other device for communication.<br><br></p>
+<p><img src="protocol/miniprotocol_board.png" alt="board" title="board"><br><br></p>
+<h2 id="III-Software-interface"><a href="#III-Software-interface" class="headerlink" title="III Software interface"></a>III Software interface</h2><p>&emsp;&emsp;The fixed format applicable to communication: prefix+message+suffix.<br>&emsp;&emsp;Standard TTL serial communication:</p>
+<table>
+    <tr>
+        <td>Baud rate</td><td>115200</td>
+    </tr>
+    <tr>
+        <td>Data bit</td><td>8</td>
+    </tr>
+    <tr>
+        <td>Stop bit</td><td>1</td>
+    </tr>
+    <tr>
+        <td>Parity bit</td><td>NA</td>
+    </tr>
+</table>
+
+<h3 id="1-Communication-format"><a href="#1-Communication-format" class="headerlink" title="1. Communication format"></a>1. Communication format</h3><table>
+    <tr>
+        <th colspan="2"><center>Prefix</center></th><th>Length</th><th bgcolor=yellow>Message</th><th>CheckSum</th><th colspan="2"><center>Suffix</center></th>
+    </tr>
+    <tr>
+        <td>0x55</td><td>0x00</td><td></td><td bgcolor=yellow></td><td></td><td>0x00</td><td>0xAA</td>
+    </tr>
+    <tr>
+        <td></td><td></td><td>Bytes occupied by the data packet </td><td bgcolor=yellow>Data</td><td>Check if data is correct </td><td></td><td></td>
+    </tr>
+</table>
+
+<p><strong>Prefix</strong>：in fixed format<br><strong>Length</strong>：length of data packet = space occupied by prefix [2] + space occupied by length<br><em><strong>Message</strong>：See <a href="#2-Commands">2. Command</a></em><br><strong>CheckSum</strong>：CheckSum= ~(Length+Message) If the sum of bytes in the bracket is greater than 255, the byte with the lowest value is taken, vice versa.<br><strong>Suffix</strong>：in fixed format<br><u>TIPS：When the local appliance receives a command, if the length or CheckSum goes wrong, then the data is considered to be wrong and the data packet will be automatically discarded.</u></p>
+<h3 id="2-Commands"><a href="#2-Commands" class="headerlink" title="2.Commands"></a>2.Commands</h3><h4 id="2-1-Write-command-no-response-0x00"><a href="#2-1-Write-command-no-response-0x00" class="headerlink" title="2.1.Write command, no response (0x00)"></a>2.1.Write command, no response (0x00)</h4><table>
+    <tr>
+        <th colspan="2"><center>Prefix</center></th><th>Length</th><th bgcolor=yellow>Command Type</th><th bgcolor=yellow>First Address</th><th bgcolor=yellow>Data</th><th>CheckSum</th><th colspan="2"><center>Suffix</center></th>
+    </tr>
+    <tr>
+        <td>0x55</td><td>0x00</td><td></td><td bgcolor=yellow></td><td bgcolor=yellow></td><td bgcolor=yellow></td><td></td><td>0x00</td><td>0xAA</td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td><td bgcolor=yellow>0x00</td><td bgcolor=yellow></td><td bgcolor=yellow>data1,data2...</td><td></td><td></td><td></td>
+    </tr>
+</table>
+
+<p><strong>Command</strong>：0x00，write data of some bytes to MemTable consecutively, no response will be generated<br><strong>First Address</strong>：the first address written in the data packet (more details are available in the protocol MemTable)<br><strong>Data</strong>：data that are written consecutively<br>Example: set the max. forward movement speed of the robot<br>&emsp;&emsp;0x55 0x00 0x09 0x00 0x30 0xFF 0xC7 0x00 0xAA<br>&emsp;Prefix：0x55 0x00<br>&emsp;Length：0x09，there are 9 bytes contained in the data packet<br>&emsp;Message：0x00 write command with no response, 0x30 register address of forward, backward movement speed, 0xff set the max. speed<br>&emsp;CheckSum：0x09+0x00+0x30+0xFF=0x138, take the lowest byte 0x38, take the inverse to get 0xC7<br>&emsp;Suffix：0x00 0xAA</p>
+<h4 id="2-2-Read-command-0x02"><a href="#2-2-Read-command-0x02" class="headerlink" title="2.2.Read command (0x02)"></a>2.2.Read command (0x02)</h4><table>
+    <tr>
+        <th colspan="2"><center>Prefix</center></th><th>Length</th><th bgcolor=yellow>Command</th><th bgcolor=yellow>First Address</th><th bgcolor=yellow>Bytes</th><th>CheckSum</th><th colspan="2"><center>Suffix</center></th>
+    </tr>
+    <tr>
+        <td>0x55</td><td>0x00</td><td></td><td bgcolor=yellow></td><td bgcolor=yellow></td><td bgcolor=yellow></td><td></td><td>0x00</td><td>0xAA</td>
+    </tr>
+    <tr>
+        <td></td><td></td><td>0x09</td><td bgcolor=yellow>0x02</td><td bgcolor=yellow></td><td bgcolor=yellow></td><td></td><td></td><td></td>
+    </tr>
+</table>
+
+<p><strong>Command</strong>：0x02,a length of consecutive bytes in the read MemTable<br><strong>First Address</strong>：the first address of the data packet that has been read (more details are available in the protocol MemTable)<br><strong>Bytes</strong>：the length of bytes that are read consecutively </p>
+<p>Format of the data packet returned: </p>
+<table>
+    <tr>
+        <th colspan="2"><center>Prefix</center></th><th>Length</th><th bgcolor=yellow>Response character</th><th bgcolor=yellow>First Address</th><th bgcolor=yellow>Data</th><th>CheckSum</th><th colspan="2"><center>Suffix</center></th>
+    </tr>
+    <tr>
+        <td>0x55</td><td>0x00</td><td></td><td bgcolor=yellow></td><td bgcolor=yellow></td><td bgcolor=yellow></td><td></td><td>0x00</td><td>0xAA</td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td><td bgcolor=yellow>0x12</td><td bgcolor=yellow></td><td bgcolor=yellow></td><td></td><td></td><td></td>
+    </tr>
+</table>
+
+<p><strong>Response character</strong>：0x12, it means this packet is response packet of the read command<br><strong>First Address</strong>：the data that has been read, with the same length as the length of bytes requested by the read command<br><strong>Data</strong>：the data that has been read, with the same length as the length of bytes requested by the read command<br>Example: read the respective position of 12 steering gears<br>&emsp;&emsp;0x55 0x00 0x09 0x02 0x50 0x0C 0x98 0x00 0xAA<br>&emsp;Prefix：0x55 0x00<br>&emsp;Length：0x09，there are 9 bytes contained in the data packet<br>&emsp;Message：0x02 read command, 0x50 gear ID is the register address at the position “11”, read 12 bytes consecutively<br>&emsp;CheckSum：0x09+0x02+0x50+0x0C=0x67, reverse to obtain 0x98<br>&emsp;Suffix：0x00 0xAA</p>
+<p>Read the packet returned:<br>&emsp;&emsp;0x55 0x00 0x14 0x12 0x50 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x89 0x00 0xAA<br>&emsp;Prefix：0x55 0x00<br>&emsp;Length：0x14，there are 20 bytes contained in the packet<br>&emsp;Message： 0x12 response character, the first address of 0x50 is the same as the corresponding read command, there are 12“0x80” that correspond to the respective address of 12 consecutive registers<br>&emsp;CheckSum：0x14+0x12+0x50+0x80*12(d)=0x676, take the byte with the lowest value 0x76, reverse to obtain 0x89<br>&emsp;Suffix：0x00 0xAA</p>
+<h3 id="3-Robot-coordinate-system"><a href="#3-Robot-coordinate-system" class="headerlink" title="3.Robot coordinate system"></a>3.Robot coordinate system</h3><p><img src="protocol/miniprotocol_maincoordinate.png" alt="maincoordinate" title="maincoordinate"></p>
+<center>Whole unit coordinate system</center>
+
+<p><img src="protocol/miniprotocol_legcoordinate.png" alt="legcoordinate" title="legcoordinate"></p>
+<center>Single leg coordinate system </center>
+
+<p>&emsp;&emsp;The MemTable of XGO is given below<br>&emsp;&emsp;Remark: test mode, whole unit mode, single leg mode, steering gear mode (priority level in a descending order): when you try to write any register under the four modes to change data, the robot will enter the mode by default while the register data under other three modes cannot work. The robot is default in whole unit mode. </p>
+<p><object data="protocol/xgominiprotocol_table.pdf" type="application/pdf" width="120%" height="500px"></object></p>
+<hr>
+<br>
+
+<!-- # <center><title1>- XGO Mini二次开发指南(2)-基于ROS开发包 -</title1></center>
+XGO Mini二次开发指南(2)-基于ROS开发包
+-- --
+<br> -->
+
+<h1 id="The-XGOLIB-Library"><a href="#The-XGOLIB-Library" class="headerlink" title="- The XGOLIB Library  -"></a><center><title1>- The XGOLIB Library  -</title1></center></h1><p><a href="pythonlib/xgo_mini_lib.zip" title="XGO-Mini-python">XGO-Mini-pythonlib download-</a></p>
+<h2 id="I-XGO-Class"><a href="#I-XGO-Class" class="headerlink" title="I XGO Class"></a>I XGO Class</h2><p>&emsp;&emsp;All functions are implemented through the method of <strong>XGO</strong> , requiring a physical interface of the incoming overhead communication with the machine dog when instantiating an XGO class object.Assuming that the serial port communication interface is COM4, the instantiation code is as follows.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dog = XGO(&#x27;COM4&#x27;)</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;<strong>Dog</strong> is the object for functional description of the class method.For methods related to pose adjustment and single-leg control, you can view the serial port communication protocol document to understand the robot coordinate system definition.</p>
+<h2 id="II-Mobile-related-methods"><a href="#II-Mobile-related-methods" class="headerlink" title="II Mobile related methods"></a>II Mobile related methods</h2><h3 id="1-Front-and-back-left-and-right-translation"><a href="#1-Front-and-back-left-and-right-translation" class="headerlink" title="1.Front and back, left and right translation"></a>1.Front and back, left and right translation</h3><p><strong>move(direction, step)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">direction</td>
+<td align="center">character</td>
+<td align="center">‘x’、’X’、’y’、’Y’</td>
+<td align="left">‘x’ or ‘X’ moves the machine dog forward or back, and ‘y’ or ‘Y’ moves the machine dog left or right</td>
+</tr>
+<tr>
+<td align="center">step</td>
+<td align="center">figure</td>
+<td align="center">x:[-25,25],y:[-18,18]</td>
+<td align="left">This parameter represents the translation step, depending on direction, positive value represents forward or left, and negative value represents back or right.When the input value exceeds the range, the dog move according to the limit value.</td>
+</tr>
+</tbody></table>
+<h3 id="2-revolve"><a href="#2-revolve" class="headerlink" title="2.revolve"></a>2.revolve</h3><p><strong>turn(step)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">step</td>
+<td align="center">figure</td>
+<td align="center">[-150,150]</td>
+<td align="left">This parameter represents rotational speed in ° / s, positive is left and negative is right.</td>
+</tr>
+</tbody></table>
+<h3 id="3-mark-time"><a href="#3-mark-time" class="headerlink" title="3.mark time"></a>3.mark time</h3><p><strong>mark_time(data)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">data</td>
+<td align="center">figure</td>
+<td align="center">[10,35]</td>
+<td align="left">This parameter represents the height of leg lift in mm and stop standing when the input is 0</td>
+</tr>
+</tbody></table>
+<h3 id="4-step-frequency"><a href="#4-step-frequency" class="headerlink" title="4.step frequency"></a>4.step frequency</h3><p><strong>pace(mode)</strong><br>speed = step frequency x stripe</p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">mode</td>
+<td align="center">string</td>
+<td align="center">[‘normal’,’low’,’high’]</td>
+<td align="left">This parameter represents the step frequency, and normal is the default step frequency, low is the slow step frequency, and high is the high-speed step frequency</td>
+</tr>
+</tbody></table>
+<h3 id="5-stop"><a href="#5-stop" class="headerlink" title="5.stop"></a>5.stop</h3><p><strong>stop()</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">demo</span><br><span class="line">#The machine dog moves at 18mm stripe</span><br><span class="line">dog.move(&#x27;x&#x27;,18)</span><br><span class="line"></span><br><span class="line">#The machine dog moves right in 5mm stripe</span><br><span class="line">dog.move(&#x27;y&#x27;,-5)</span><br><span class="line"></span><br><span class="line">#The next code can be executed normally and will move left at 18mm stripe </span><br><span class="line">dog.move(&#x27;Y&#x27;,30)</span><br><span class="line"></span><br><span class="line">#The machine dog turns left at 60 ° / s</span><br><span class="line">dog.turn(60)</span><br><span class="line"></span><br><span class="line">#The machine dog moves at a high-speed pace</span><br><span class="line">dog.pace(&#x27;high&#x27;)</span><br><span class="line"></span><br><span class="line">#The machine dog mark time at the height of 25mm</span><br><span class="line">dog.mark_time(25)</span><br><span class="line"></span><br><span class="line">#The machine dog stop make time</span><br><span class="line">dog.mark_time(0)</span><br><span class="line"></span><br><span class="line">#Machine dog stop</span><br><span class="line">dog.stop()</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;A series of methods are encapsulated in the library based on these methods for easy use.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method name</th>
+<th align="center">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">move_x(step)</td>
+<td align="center">Move front and back, equivalent to move (‘x’, step)</td>
+</tr>
+<tr>
+<td align="center">move_y(step)</td>
+<td align="center">Move left to right, equivalent to move (‘y’, step)</td>
+</tr>
+<tr>
+<td align="center">forward(step)</td>
+<td align="center">Forward, the equivalent of move (‘x’, abs (step))</td>
+</tr>
+<tr>
+<td align="center">back(step)</td>
+<td align="center">Back, equivalent to move (‘x’, -abs (step))</td>
+</tr>
+<tr>
+<td align="center">left(step)</td>
+<td align="center">Left , equivalent to move (‘y’, abs (step))</td>
+</tr>
+<tr>
+<td align="center">right(step)</td>
+<td align="center">Right , equivalent to move (‘y’, -abs (step))</td>
+</tr>
+<tr>
+<td align="center">turnleft(step)</td>
+<td align="center">Left turn, equivalent to turn (abs (step))</td>
+</tr>
+<tr>
+<td align="center">turnright(step)</td>
+<td align="center">Turn right, equivalent to turn (-abs (step))</td>
+</tr>
+</tbody></table>
+<h2 id="III-Position-Methods"><a href="#III-Position-Methods" class="headerlink" title="III Position Methods"></a>III Position Methods</h2><p>&emsp;&emsp;When adjusting the position, the foot position of the four legs does not change, and the position or Angle of the body changes.</p>
+<h3 id="1-Body-position-translation"><a href="#1-Body-position-translation" class="headerlink" title="1.Body position translation"></a>1.Body position translation</h3><p><strong>translation(direction, data)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">direction</td>
+<td align="center">Single-character or character list</td>
+<td align="center">‘x’, ‘y’, ‘z’, or a list containing the above values</td>
+<td align="left">‘x’ represents forward and backward translation, ‘y’ represents left and right translation, and ‘z’ represents height</td>
+</tr>
+<tr>
+<td align="center">data</td>
+<td align="center">figure</td>
+<td align="center">x:[-35,35],y:[-18,18],z:[75,115]</td>
+<td align="left">This parameter represents the body position translation distance in mm</td>
+</tr>
+</tbody></table>
+<h3 id="2-Body-posture-adjustment"><a href="#2-Body-posture-adjustment" class="headerlink" title="2.Body posture adjustment"></a>2.Body posture adjustment</h3><p><strong>attitude(direction, data)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">direction</td>
+<td align="center">Single-character or character list</td>
+<td align="center">‘r’, ‘p’, ‘y’, or a list containing the above values</td>
+<td align="left">‘r’ represents the roll , ‘p’ is the pitch and ‘y’ is the yaw</td>
+</tr>
+<tr>
+<td align="center">data</td>
+<td align="center">figure</td>
+<td align="center">r:[-20,20],p:[-15,15],y:[11,11]</td>
+<td align="left">This parameter represents the magnitude of the body pose adjustment in °</td>
+</tr>
+</tbody></table>
+<h3 id="3-Body-cycle-translation"><a href="#3-Body-cycle-translation" class="headerlink" title="3.Body cycle translation"></a>3.Body cycle translation</h3><p><strong>periodic_tran(direction, period)</strong><br>the body will be reciprocated in the specified period and direction by half the position translation limit, allowing periodic movements in multiple directions simultaneously.Body cycle movement and the whole machine movement cannot be carried out at the same time.</p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">direction</td>
+<td align="center">Single character or character list</td>
+<td align="center">‘x’, ‘y’, ‘z’, or a list containing the above values</td>
+<td align="left">‘x’ represents forward and backward translation, ‘y’ represents left and right translation, and ‘z’ represents height</td>
+</tr>
+<tr>
+<td align="center">period</td>
+<td align="center">figure</td>
+<td align="center">[1.5,8]</td>
+<td align="left">This parameter represents the motion cycle in second; entering 0 represents the stop movement</td>
+</tr>
+</tbody></table>
+<h3 id="4-Body-cycle-rotation"><a href="#4-Body-cycle-rotation" class="headerlink" title="4.Body cycle rotation"></a>4.Body cycle rotation</h3><p><strong>periodic_rot(direction, period)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">direction</td>
+<td align="center">Single character or character list</td>
+<td align="center">‘r’, ‘p’, ‘y’, or a list containing the above values</td>
+<td align="left">‘r’ represents the roll , ‘p’is  the pitch and ‘y’ is the yaw</td>
+</tr>
+<tr>
+<td align="center">period</td>
+<td align="center">figure</td>
+<td align="center">[1.5,8]</td>
+<td align="left">This parameter represents the motion cycle in second; entering 0 represents the stop movement</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">demo</span><br><span class="line">#The body translate18mm forward</span><br><span class="line">dog.translation(&#x27;x&#x27;,18)</span><br><span class="line"></span><br><span class="line">#The body translate10mm to the right and height set to 100mm</span><br><span class="line">#You can enter either a single value or a list to control the movement in multiple directions</span><br><span class="line">dog.translation([&#x27;y&#x27;,&#x27;z&#x27;],[-10,100])</span><br><span class="line"></span><br><span class="line">#The body pitch angle was set to 10 °, yaw angle set to-4 ° and roll angle set to 8 °</span><br><span class="line">dog.attitude([&#x27;p&#x27;,&#x27;y&#x27;,&#x27;r&#x27;],[10,-4,8])</span><br><span class="line"></span><br><span class="line">#The body was operated in a 3s cycle, with forward and backward translation</span><br><span class="line">dog.periodic_tran(&#x27;x&#x27;,3)</span><br><span class="line"></span><br><span class="line">#The body was reciprocated at a 3s cycle and at a yaw angle at a 7.4s cycle</span><br><span class="line">dog.periodic_rot([&#x27;r&#x27;,&#x27;y&#x27;],[3,7.4])</span><br><span class="line"></span><br><span class="line">#Stop the reciprocation of the yaw angle</span><br><span class="line">dog.periodic_rot(&#x27;y&#x27;,0)</span><br></pre></td></tr></table></figure>
+<h2 id="IV-The-rest-methods"><a href="#IV-The-rest-methods" class="headerlink" title="IV The rest methods"></a>IV The rest methods</h2><h3 id="1-Restore-the-initial-state"><a href="#1-Restore-the-initial-state" class="headerlink" title="1.Restore the initial state"></a>1.Restore the initial state</h3><p><strong>reset()</strong><br>stops all movements, and all states return to the initial state</p>
+<h3 id="2-Set-the-self-stabilization"><a href="#2-Set-the-self-stabilization" class="headerlink" title="2.Set the self-stabilization"></a>2.Set the self-stabilization</h3><p><strong>imu(mode)</strong><br>When self-stable , the machine dog will automatically adjust the attitude angle to keep the back in a horizontal position, and must not manually set the attitude angle when turned on.</p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">mode</td>
+<td align="center">integer</td>
+<td align="center">0、1</td>
+<td align="left">0 Represents closed, and 1 represents open</td>
+</tr>
+</tbody></table>
+<h3 id="3-Single-Leg"><a href="#3-Single-Leg" class="headerlink" title="3.Single Leg"></a>3.Single Leg</h3><p><strong>leg(leg_id, data)</strong> controls the foot position of the specified leg</p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">leg_id</td>
+<td align="center">integer</td>
+<td align="center">1、2、3、4</td>
+<td align="left">They represent the left front, right front, right rear and left rear</td>
+</tr>
+<tr>
+<td align="center">data</td>
+<td align="center">List of numbers of length 3</td>
+<td align="center">x:[-35,35],y:[-18,18],z:[75,115]</td>
+<td align="left">This parameter represents the foot  position in mm</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Demo</span><br><span class="line">#Set the foot position of the right front leg as (10mm, -12mm, 90mm)</span><br><span class="line">dog.leg(2,[10,-12,90])</span><br></pre></td></tr></table></figure>
+<h3 id="4-Servo-Control"><a href="#4-Servo-Control" class="headerlink" title="4.Servo Control"></a>4.Servo Control</h3><p><strong>motor(motor_id, data)</strong><br>controls the rotation angle of the Servo</p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">motor_id</td>
+<td align="center">List of integer or integers</td>
+<td align="center">[11,12,13,21,22,23,31,32,33,41,42,43]</td>
+<td align="left">The first number 1,2,3,4 stand for left front , right front ,right rear ,left rear.</td>
+</tr>
+<tr>
+<td align="center">The second number 1,2,3 stand for down ,middle and upper Servo</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">data</td>
+<td align="center">List of numbers or numbers</td>
+<td align="center">Down: [-65,73], Middle: [-66,93], Upper: [-31,31]</td>
+<td align="left">This parameter represents the foot position in °</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">demo</span><br><span class="line">#Set the right front leg middle Servo rotation angle to 30 °</span><br><span class="line">dog.motor(22,30)</span><br><span class="line"></span><br><span class="line">#Set the rotation angle of the upper right front leg at 10 ° and the down left rear leg at-20 °</span><br><span class="line">dog.motor([23,41],[10,-20])</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-Uninstall-the-single-leg-Servo"><a href="#5-Uninstall-the-single-leg-Servo" class="headerlink" title="5.Uninstall the single leg Servo"></a>5.Uninstall the single leg Servo</h3><p><strong>unload_motor(leg_id)</strong><br>unload three Servo on one leg without output torque, which can be rotate by hand, generally used for writing actions</p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th>explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">leg_id</td>
+<td align="center">integer</td>
+<td align="center">1,2,3,4</td>
+<td>They represent the left front, right front, right rear and left rear</td>
+</tr>
+</tbody></table>
+<h3 id="6-All-Servo-are-uninstalled"><a href="#6-All-Servo-are-uninstalled" class="headerlink" title="6.All Servo are uninstalled"></a>6.All Servo are uninstalled</h3><p><strong>unload_allmotor()</strong><br>makes all Servo unloaded without output torque and can be turned by hand</p>
+<h3 id="7-Single-leg-Servo-loading"><a href="#7-Single-leg-Servo-loading" class="headerlink" title="7.Single leg Servo loading"></a>7.Single leg Servo loading</h3><p><strong>load_motor(leg_id)</strong><br>keeps the three Servo on one leg in current position, output the torque, which can not be rotated by hand, and is generally used for writing actions</p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th>explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">leg_id</td>
+<td align="center">integer</td>
+<td align="center">1,2,3,4</td>
+<td>They represent the left front, right front, right rear and left rear</td>
+</tr>
+</tbody></table>
+<h3 id="8-All-Servo-are-loaded"><a href="#8-All-Servo-are-loaded" class="headerlink" title="8.All Servo are loaded"></a>8.All Servo are loaded</h3><p><strong>load_allmotor()</strong><br>keeps all Servo in current position, output torque which can not be turned by hand</p>
+<h3 id="9-Set-the-Servo-rotation-speed"><a href="#9-Set-the-Servo-rotation-speed" class="headerlink" title="9.Set the Servo rotation speed"></a>9.Set the Servo rotation speed</h3><p><strong>motor_speed(speed)</strong><br>adjusts the rotation speed of the Servo for separate control</p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">speed</td>
+<td align="center">integer</td>
+<td align="center">[1,255]</td>
+<td align="left">0 At the lowest speed and 255 at the highest speed</td>
+</tr>
+</tbody></table>
+<h3 id="10-Perform-a-preset-action"><a href="#10-Perform-a-preset-action" class="headerlink" title="10.Perform a preset action"></a>10.Perform a preset action</h3><p><strong>action(action_id)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">parameter</th>
+<th align="center">form</th>
+<th align="center">input range</th>
+<th align="left">explain</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">action_id</td>
+<td align="center">integer</td>
+<td align="center">[1,255]</td>
+<td align="left">The ID and action correspondence is shown in the table below</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">Action</th>
+<th align="center">ID</th>
+<th align="center">Action</th>
+<th align="center">ID</th>
+<th align="center">Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">fall</td>
+<td align="center">2</td>
+<td align="center">stand</td>
+<td align="center">3</td>
+<td align="center">crawling</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">circle</td>
+<td align="center">5</td>
+<td align="center">Mark time</td>
+<td align="center">6</td>
+<td align="center">Squat up</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">turn Roll</td>
+<td align="center">8</td>
+<td align="center">turn Pitch</td>
+<td align="center">9</td>
+<td align="center">turn Yaw</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">Three-axis rotation</td>
+<td align="center">11</td>
+<td align="center">piss</td>
+<td align="center">12</td>
+<td align="center">sit down</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center">beckon</td>
+<td align="center">14</td>
+<td align="center">stretch oneself</td>
+<td align="center">15</td>
+<td align="center">wave</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="center">vacillate to the left and right</td>
+<td align="center">17</td>
+<td align="center">For food</td>
+<td align="center">18</td>
+<td align="center">Find food</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td align="center">shake hands</td>
+<td align="center">20</td>
+<td align="center">pay a New Year call</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h2 id="V-Read-methods"><a href="#V-Read-methods" class="headerlink" title="V Read methods"></a>V Read methods</h2><h3 id="Read-the-Servo"><a href="#Read-the-Servo" class="headerlink" title="Read the Servo"></a>Read the Servo</h3><p><strong>read_motor()</strong><br>read 12 Servos, returns a list 12 servos ,if failed returns an empty list</p>
+<h3 id="Read-the-battery"><a href="#Read-the-battery" class="headerlink" title="Read the battery"></a>Read the battery</h3><p><strong>read_battery()</strong><br>read_battery() ,read the current battery power , returns an integer of 1-100 percentage, if failed return 0.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/08/15/XGOlite/" rel="prev" title="XGO lite">
+                  <i class="fa fa-chevron-left"></i> XGO lite
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fas fa-copyright"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luwu Intelligent Technology Co., Ltd</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
